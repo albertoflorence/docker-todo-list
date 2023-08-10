@@ -2,10 +2,10 @@ FROM betrybe/puppetter:1.0
 
 WORKDIR /app/tests
 
-COPY node_modules.tar.gz /app/tests/
+ADD node_modules.tar.gz .
 
-COPY . /app/tests/
+COPY . .
 
-CMD ["npm"]
+ENTRYPOINT ["npm"]
 
-ENTRYPOINT [ "start" ]
+CMD [ "test" ]

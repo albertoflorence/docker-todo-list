@@ -1,13 +1,13 @@
-FROM alpine:3.16
+FROM node:16-alpine
 
 EXPOSE 3001
 
 WORKDIR /app/back-end
 
-COPY  node_modules.tar.gz /app/back-end/
+ADD node_modules.tar.gz .
 
-COPY . /app/back-end/
+COPY . .
 
-CMD ["npm"]
+ENTRYPOINT [ "npm" ]
 
-ENTRYPOINT [ "start" ]
+CMD [ "start" ]
