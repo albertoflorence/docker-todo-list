@@ -6,4 +6,6 @@ COPY node_modules.tar.gz /app/tests/
 
 COPY . /app/tests/
 
-CMD ["npm", "test"]
+CMD ["npm"]
+
+ENTRYPOINT [ "start" ]

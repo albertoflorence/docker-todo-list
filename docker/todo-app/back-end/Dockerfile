@@ -8,4 +8,6 @@ COPY  node_modules.tar.gz /app/back-end/
 
 COPY . /app/back-end/
 
-CMD ["npm", "start"]
+CMD ["npm"]
+
+ENTRYPOINT [ "start" ]

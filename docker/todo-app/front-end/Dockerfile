@@ -8,4 +8,6 @@ COPY node_modules.tar.gz /app/front-end/
 
 COPY . /app/front-end/
 
-CMD ["npm", "start"]
+CMD ["npm"]
+
+ENTRYPOINT [ "start" ]
